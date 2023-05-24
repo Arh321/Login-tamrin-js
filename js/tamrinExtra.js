@@ -22,15 +22,15 @@ const inputhandling = (e) => {
     
             if(validUP && validLow && username.length < 16){
                 document.getElementById('name').style.borderColor = 'green';
-                document.getElementById('error').style.display = 'none';
+                document.getElementById('error1').style.display = 'none';
             }else{
                 document.getElementById('name').style.borderColor = 'red';
-                document.getElementById('error').style.display = 'block';
+                document.getElementById('error1').style.display = 'block';
             }
         }
     }else{
         document.getElementById('name').style.borderColor = 'rgb(48, 48, 48)';
-        document.getElementById('error').style.display = 'none';
+        document.getElementById('error1').style.display = 'none';
     }
    
     
@@ -62,14 +62,14 @@ const ValidateEmail = (e) =>
 
         if(Valid){
             document.getElementById('email').style.borderColor = 'green';
-            document.getElementById('error').style.display = 'none';
+            document.getElementById('error2').style.display = 'none';
         }else{
             document.getElementById('email').style.borderColor = 'red';
-            document.getElementById('error').style.display = 'block';
+            document.getElementById('error2').style.display = 'block';
         }
     }}else{
         document.getElementById('email').style.borderColor = 'rgb(48, 48, 48)';
-        document.getElementById('error').style.display = 'none';
+        document.getElementById('error2').style.display = 'none';
     }
 }
 
@@ -106,15 +106,15 @@ const validPassword = (e) => {
     
             if(validUP && validLow && ValidNum && username.length < 16){
                 document.getElementById('password').style.borderColor = 'green';
-                document.getElementById('errore').style.display = 'none';
+                document.getElementById('error3').style.display = 'none';
             }else{
                 document.getElementById('password').style.borderColor = 'red';
-                document.getElementById('errore').style.display = 'block';
+                document.getElementById('error3').style.display = 'block';
             }   
         }
     }else{
         document.getElementById('password').style.borderColor = 'rgb(48, 48, 48)';
-        document.getElementById('errore').style.display = 'none';
+        document.getElementById('error3').style.display = 'none';
     }
 }
 
