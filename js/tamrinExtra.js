@@ -8,16 +8,22 @@ const inputhandling = (e) => {
     let username = e.target.value.split('');
     console.log(username)
     if(username.length != 0){
-        for (let char of username){
-            if (UpperLetters.split('').indexOf(char) != -1){
+        for (let i=0 ; i < username.length ; i++){
+            if (UpperLetters.split('').indexOf(username[i]) != -1){
                 validUP = true;
             }
-            if( lowerLetters.split('').indexOf(char) != -1){
+            if( lowerLetters.split('').indexOf(username[i]) != -1){
                 validLow = true;
             }
-            if(allLetters.indexOf(char) == -1){
+            // if(allLetters.indexOf(username[i]) == -1){
+            //     validLow = false;
+            //     validUP = false
+            // }
+
+            if (lowerLetters.split('').indexOf(username[i]) == -1 && UpperLetters.split('').indexOf(username[i]) == -1){
+                validUP = false;
                 validLow = false;
-                validUP = false
+                i = username.length;
             }
     
             if(validUP && validLow && username.length < 16){
@@ -28,15 +34,15 @@ const inputhandling = (e) => {
                 document.getElementById('error1').style.display = 'block';
             }
         }
+
     }else{
         document.getElementById('name').style.borderColor = 'rgb(48, 48, 48)';
         document.getElementById('error1').style.display = 'none';
-    }
-   
-    
+    } 
 }
 document.getElementById('name')
 .addEventListener('input',inputhandling);
+
 
 const ValidateEmail = (e) =>
 {
@@ -104,7 +110,7 @@ const validPassword = (e) => {
                 ValidNum = false;
             }
     
-            if(validUP && validLow && ValidNum && username.length < 16){
+            if(validUP && validLow && ValidNum && username.length > 8){
                 document.getElementById('password').style.borderColor = 'green';
                 document.getElementById('error3').style.display = 'none';
             }else{
