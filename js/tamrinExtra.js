@@ -15,10 +15,6 @@ const inputhandling = (e) => {
             if( lowerLetters.split('').indexOf(username[i]) != -1){
                 validLow = true;
             }
-            // if(allLetters.indexOf(username[i]) == -1){
-            //     validLow = false;
-            //     validUP = false
-            // }
 
             if (lowerLetters.split('').indexOf(username[i]) == -1 && UpperLetters.split('').indexOf(username[i]) == -1){
                 validUP = false;
