@@ -106,7 +106,7 @@ const validPassword = (e) => {
                 ValidNum = false;
             }
     
-            if(validUP && validLow && ValidNum && username.length > 8){
+            if(validUP && validLow && ValidNum && username.length > 7){
                 document.getElementById('password').style.borderColor = 'green';
                 document.getElementById('error3').style.display = 'none';
             }else{
